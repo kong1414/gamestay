@@ -1,14 +1,14 @@
 
 server:
-  port: 8080
+  port: 9000
   tomcat:
     uri-encoding: UTF-8
 spring:
   datasource:
     url: jdbc:mysql://120.78.136.84:3306/android?useSSL=false&characterEncoding=utf8
     username: school
-    password: LU3BG8pnWZ7bUT7vvjqHwcDGPRwTwzs44nI2Qigc4HgDuh2bZpVXJxUIf///kSs/tiKROmPOxeEKrds6xBS4mw==
-    driver-class-name: com.mysql.jdbc.Driver
+    password: ABCabc-123
+    driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initial-size: 8 #初始化连接大小
@@ -44,9 +44,6 @@ spring:
         enabled: true
         login-username: admin
         login-password: admin
-      connection-properties: config.decrypt=true;config.decrypt.key=${public-key}
-
-public-key: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMZrfwJwbN82nO3UgHI8ARp+kt+ghqiV/22Fxm9zqcmkkQGaxF/939vrR0MvpplHIwMstBrvBQgBXOMJvlixXlcCAwEAAQ==
 
 devtools:
   restart:
@@ -68,4 +65,14 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
 
+swagger:
+  title: gamestay游星
+  description: gamestay游星描述
+  version: 1.0
+  terms-of-service-url: http://www.javastack.cn/
+  base-package: cn.xmut.edu.gamestay
+  contact:
+    name: Javastack
+    url: http://www.javastack.cn/
+    email: admin@javastack.cn
 

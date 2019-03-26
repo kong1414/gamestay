@@ -1,7 +1,13 @@
 package cn.xmut.edu.gamestay.pojo.po;
 
-import javax.persistence.*;
+import lombok.Data;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Data
 @Table(name = "news_content")
 public class NewsContent {
     @Id
@@ -13,60 +19,4 @@ public class NewsContent {
     private String title;
 
     private String message;
-
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    /**
-     * @return from
-     */
-    public String getFrom() {
-        return from;
-    }
-
-    /**
-     * @param from
-     */
-    public void setFrom(String from) {
-        this.from = from == null ? null : from.trim();
-    }
-
-    /**
-     * @return title
-     */
-    public String getTitle() {
-        return title;
-    }
-
-    /**
-     * @param title
-     */
-    public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return message;
-    }
-
-    /**
-     * @param message
-     */
-    public void setMessage(String message) {
-        this.message = message == null ? null : message.trim();
-    }
 }
